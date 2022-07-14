@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import BookForm from './BookForm';
+import BookList from './BookList';
 
 function Books() {
+  const books = useState({ title: '', author: '' });
+
   return (
     <>
       <ul>
@@ -11,6 +14,7 @@ function Books() {
         <li>Progress</li>
         <li>More details</li>
       </ul>
+      <BookList books={books} />
       <BookForm />
     </>
   );

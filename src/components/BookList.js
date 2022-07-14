@@ -1,12 +1,15 @@
 import React from 'react';
+import Book from './Book';
 
-function BookList(props) {
+function BookList(books) {
+  const { title, author } = books;
   return (
     <div>
-      <h2>Add Book</h2>
       <ul>
-        <li>props.title</li>
+        <li>{title}</li>
+        <li>{author}</li>
       </ul>
+      <Book book={(title, author)} />
     </div>
   );
 }
