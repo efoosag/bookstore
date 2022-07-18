@@ -10,6 +10,7 @@
 - Descriptive and Understanding Commit Messages and ReadMe file
 - Pull Request in Github for code review
 - Introduce Router for page navigation
+- Include Redux for state management
 
 ## Built With
 
