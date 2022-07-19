@@ -3,7 +3,11 @@ const ADD_BOOK = './books/ADD_BOOK';
 const REMOVE_BOOK = './books/REMOVE_BOOK';
 
 // initialize book
-const initState = [];
+const initState = [
+  { id: '1', title: 'Fire Man', author: 'man' },
+  { id: '2', title: 'Walking Alone', author: 'walker' },
+  { id: '3', title: 'Die Another', author: 'David' },
+];
 
 // Action Creators
 export const addBook = (addbook) => ({
