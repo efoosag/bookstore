@@ -4,7 +4,7 @@ import BookItem from './BookItem';
 
 function BookList({ books }) {
   return (
-    <ul>
+    <ul className="book-content">
       {books.map((book) => (
         <BookItem key={book.id} book={book} />
       ))}
@@ -12,8 +12,6 @@ function BookList({ books }) {
   );
 }
 
-BookList.propTypes = {
-  books: PropTypes.arrayOf(BookItem.propTypes.book).isRequired,
-};
+BookList.propTypes = PropTypes.node.isRequired;
 
 export default BookList;

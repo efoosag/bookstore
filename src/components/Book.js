@@ -1,12 +1,16 @@
 /* eslint-disable import/no-cycle */
-import React from 'react';
-import { useSelector } from 'react-redux';
-
+import React, { useEffect } from 'react';
+import { useSelector, shallowEqual, useDispatch } from 'react-redux';
+import { getBooks } from '../redux/books/books';
 import BookList from './BookList';
 import BookForm from './BookForm';
 
 function Book() {
-  const books = useSelector((state) => state.Reducer);
+  const books = useSelector((state) => state.books, shallowEqual);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getBooks());
+  }, []);
 
   return (
     <div>
