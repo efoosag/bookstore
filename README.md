@@ -11,6 +11,7 @@
 - Pull Request in Github for code review
 - Introduce Router for page navigation
 - Include Redux for state management
+- Refactor to perfrom CRUD operation from API
 
 ## Built With
 

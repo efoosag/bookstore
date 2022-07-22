@@ -5,14 +5,16 @@ import { removeBook } from '../redux/books/books';
 
 function BookItem({ book }) {
   const dispatch = useDispatch();
+  const { id } = book;
 
   return (
     <ul>
       <li>
-        <button type="button" onClick={() => dispatch(removeBook(book.id))}>
+        <button type="button" onClick={() => dispatch(removeBook(id))}>
           Remove
         </button>
       </li>
+      <li>{book.category}</li>
       <li>{book.title}</li>
       <li>{book.author}</li>
     </ul>
@@ -24,6 +26,7 @@ BookItem.propTypes = {
     id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
   }).isRequired,
 };
 
