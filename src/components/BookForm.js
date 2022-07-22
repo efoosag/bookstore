@@ -8,10 +8,12 @@ function BookForm() {
   const dispatch = useDispatch();
   let title = '';
   let author = '';
+  let category = '';
 
   const clear = () => {
     document.getElementById('title').value = '';
     document.getElementById('author').value = '';
+    document.getElementById('category').value = '';
   };
 
   const submitBook = (e) => {
@@ -22,6 +24,7 @@ function BookForm() {
           id: String(uuidv4()),
           title,
           author,
+          category,
         })
       );
       clear();
@@ -35,6 +38,9 @@ function BookForm() {
     }
     if (inputName === 'author') {
       author = e.target.value;
+    }
+    if (inputName === 'category') {
+      category = e.target.value;
     }
   };
 
@@ -56,6 +62,14 @@ function BookForm() {
           placeholder="Book Author"
           onChange={handleAdd}
           id="author"
+          required
+        />
+        <input
+          type="text"
+          name="category"
+          onChange={handleAdd}
+          placeholder="Book category"
+          id="category"
           required
         />
         <button type="submit" onClick={submitBook}>

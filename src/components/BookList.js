@@ -1,3 +1,4 @@
+/* eslint-disable comma-dangle */
 import React from 'react';
 import PropTypes from 'prop-types';
 import BookItem from './BookItem';
@@ -12,6 +13,15 @@ function BookList({ books }) {
   );
 }
 
-BookList.propTypes = PropTypes.node.isRequired;
+BookList.propTypes = {
+  books: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      title: PropTypes.string,
+      author: PropTypes.string,
+      category: PropTypes.string,
+    }).isRequired
+  ).isRequired,
+};
 
 export default BookList;

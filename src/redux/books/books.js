@@ -34,15 +34,35 @@ const Reducer = (state = initState, action) => {
 };
 
 // Action Creators
-export const addBook = (addbook) => ({
-  type: ADD_BOOK,
-  addbook,
-});
+export const addBook = (book) => async (dispatch) => {
+  fetch(url, {
+    method: 'POST',
+    body: JSON.stringify({
+      item_id: book.id,
+      title: book.title,
+      author: book.author,
+      category: book.category,
+    }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  });
+  dispatch({
+    type: ADD_BOOK,
+    book,
+  });
+};
 
-export const removeBook = (id) => ({
-  type: REMOVE_BOOK,
-  id,
-});
+export const removeBook = (id) => async (dispatch) => {
+  const bookDelete = await fetch(`${url}/${id}`, { method: 'DELETE' });
+  const response = await bookDelete.text();
+  if (response) {
+    dispatch({
+      type: REMOVE_BOOK,
+      id,
+    });
+  }
+};
 
 export const getBooks = () => async (dispatch) => {
   const response = await fetch(url);
