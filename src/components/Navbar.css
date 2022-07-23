@@ -6,8 +6,7 @@ body {
 }
 
 ul li {
-  list-style: 0;
-  list-style-type: none;
+  list-style: none;
 }
 
 .container {
