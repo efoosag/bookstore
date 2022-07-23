@@ -12,6 +12,7 @@
 - Introduce Router for page navigation
 - Include Redux for state management
 - Refactor to perfrom CRUD operation from API
+- Add styling to Api
 
 ## Built With
 
