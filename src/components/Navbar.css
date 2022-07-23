@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&family=Inter&family=Nosifer&family=Roboto:wght@100&family=UnifrakturMaguntia&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: 0;
+  list-style-type: none;
+}
+
+.container {
+  height: 3rem;
+  margin: 0 0 2rem;
+  padding: 1.4rem 4rem 1.7rem 4.3rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #121212;
+  align-items: center;
+}
+
+.linkContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.brandContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.brand {
+  width: 20rem;
+  height: 2rem;
+  margin: 0.375rem 2rem 0.125rem 0;
+  font-family: Montserrat, serif;
+  font-size: 2.2rem;
+  font-weight: bolder;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.brandText {
+  color: #0290ff;
+  text-decoration: none;
+  padding-right: 0;
+  font-weight: bolder;
+}
+
+.icon {
+  order: 2;
+  font-size: 30px;
+  color: #0290ff;
+}
+
+.link {
+  text-decoration: none;
+  color: #121212;
+  font-size: 20px;
+  padding: 5px;
+  margin-right: 8px;
+  gap: 4px;
+}
+
+.link:hover {
+  font-weight: bolder;
+}

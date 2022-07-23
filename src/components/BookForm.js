@@ -3,6 +3,7 @@ import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/books';
+import './BookForm.css';
 
 function BookForm() {
   const dispatch = useDispatch();
@@ -45,12 +46,13 @@ function BookForm() {
   };
 
   return (
-    <div>
-      <h2>Add Book</h2>
+    <div className="formContainer">
+      <h2 className="text">Add Book</h2>
       <form>
         <input
           type="text"
           name="title"
+          className="titleInput"
           placeholder="Book Title"
           onChange={handleAdd}
           id="title"
@@ -59,6 +61,7 @@ function BookForm() {
         <input
           type="text"
           name="author"
+          className="authorInput"
           placeholder="Book Author"
           onChange={handleAdd}
           id="author"
@@ -67,12 +70,13 @@ function BookForm() {
         <input
           type="text"
           name="category"
+          className="categoryInput"
           onChange={handleAdd}
           placeholder="Book category"
           id="category"
           required
         />
-        <button type="submit" onClick={submitBook}>
+        <button type="submit" className="formButton" onClick={submitBook}>
           Add Book
         </button>
       </form>
