@@ -35,8 +35,7 @@
 
 ### For Live Demo
 
-- https://mathsmagic.herokuapp.com/
-- https://62cff7c49951cf4d49283fbd--imaginative-cobbler-e1d3a8.netlify.app/
+- https://efoosag.github.io/bookstore/
 
 ### Prerequisites
 
